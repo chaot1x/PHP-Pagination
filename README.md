@@ -1,2 +1,18 @@
 # PHP-Pagination
-Simple PHP Pagination class
+This pagination class automatically generate pagination markup based on bootstrap  http://getbootstrap.com/components/#pagination
+
+##### Simple usage
+```php
+<?php
+    // Include pagination class
+    require_once 'PHP-Pagination.php';
+    
+    // Initialize class
+    $pager = new Pagination();
+    
+    // Prepare pagination, var_dump($q) to see available variables
+    $q = $pager->prepare($_GET['page'], 5);
+    
+    // Execute pagination
+    echo $pager->total($total)->execute();
+```
