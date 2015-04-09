@@ -5,7 +5,7 @@ This pagination class automatically generate pagination markup based on bootstra
 ```php
 <?php
     // Include pagination class
-    require_once 'PHP-Pagination.php';
+    require_once 'Pagination.php';
     
     // Initialize class
     $pager = new Pagination();
