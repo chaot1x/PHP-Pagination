@@ -119,6 +119,10 @@ class Pagination {
         $currp = $this->instance['page'];
         $total = $this->total;
         $lastp = ceil($total/$this->instance['limit']);
+        /* Small fix */
+        if($currp > $lastp) {
+            $currp = $lastp;
+        }
         /* Don't change this */
         $adj   = 3;
 
