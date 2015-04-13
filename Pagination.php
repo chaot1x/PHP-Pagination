@@ -138,8 +138,8 @@ class Pagination {
                     $html .= sprintf($this->templates[$this->template]['active'], $c);
                 } else {
                     $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$c, $c);
-				}
-			}
+		}
+	    }
         } else {
             if($currp < (($adj * 2) - 1)) {
                 for($c = 1; $c <= 5; $c++) {
@@ -153,11 +153,11 @@ class Pagination {
                 $html .= $this->templates[$this->template]['disabled'];
 				
                 for($e = $lastp - 4; $e <= $lastp; $e++) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$e, $e);
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$e, $e);
                 }
             } elseif($lastp - (($adj * 2) - 3) > $currp && $currp > (($adj * 2) - 2)) {
                 for($f = 1; $f <= 3; $f++) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$f, $f);
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$f, $f);
                 }
 
                 /* Fix starting */
@@ -175,10 +175,10 @@ class Pagination {
                 }
 
                 if($cstart == $currp) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].($currp-1), ($currp-1));
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].($currp-1), ($currp-1));
                 } else {
                     $html .= $this->templates[$this->template]['disabled'];
- 			    }
+ 	        }
 
                 for($c = $cstart; $c <= $cend; $c++) {
                     if($c == $currp) {
@@ -189,17 +189,17 @@ class Pagination {
                 }
 
                 if($cend == $currp) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].($currp+1), ($currp+1));
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].($currp+1), ($currp+1));
                 } else {
                     $html .= $this->templates[$this->template]['disabled'];
                 }
 
                 for($e = $lastp - 2; $e <= $lastp; $e++) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$e, $e);
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$e, $e);
                 }
             } else {
                 for($f = 1; $f <= 5; $f++) {
-                	$html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$f, $f);
+                    $html .= sprintf($this->templates[$this->template]['link'], $this->instance['url'].$f, $f);
                 }
 
                 $html .= $this->templates[$this->template]['disabled'];
@@ -219,7 +219,7 @@ class Pagination {
         }
 
         if($lastp > 1) {
-        	return sprintf($this->templates[$this->template]['base'], $html);
+            return sprintf($this->templates[$this->template]['base'], $html);
         }
     }
 }
