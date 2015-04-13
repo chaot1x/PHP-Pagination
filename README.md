@@ -23,7 +23,7 @@ This pagination class automatically generate pagination markup based on bootstra
         'next' => '<li class="next"><a href="%s">Next</a></li>',
     ]);
     
-    /* Set custom template, also can be used in chaining ($pager->template('new-template')->execute();) */
+    /* Set custom template, also can be used in chaining ($pager->template('new-template')->total(200)->execute();) */
     $pager->template('new-template');
     
     /* Set total rows for example */
