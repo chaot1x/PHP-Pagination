@@ -60,9 +60,9 @@ class Pagination {
 
         if($page < 1) {
             $page = 1;
-		}
+	}
 
-		$perpage = (int)$perpage;
+	$perpage = (int)$perpage;
         $startpoint = ($page * $perpage) - $perpage;
         $this->instance = [
             'page'       => $page,
@@ -71,7 +71,7 @@ class Pagination {
             'limit_sql'  => "LIMIT {$startpoint}, {$perpage}",
             'url'        => $url
         ];
-	}
+    }
 
     /**
      * Set total rows
